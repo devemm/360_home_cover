@@ -1,0 +1,175 @@
+header {
+  background-color: rgb(23, 28, 50);
+  background-size: 5px;
+  color: white;
+  height: 27vh;
+
+  &::before {
+    content: "";
+    background-image: url("../img/trame.gif");
+    width: 100%;
+    height: 0;
+    opacity: 0.1;
+    display: block;
+    padding-bottom: 27vh;
+    position: absolute;
+    background-size: 1%;
+    left: 0;
+    top: 0;
+  }
+
+  hr {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 45px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 15px;
+  }
+
+  a {
+    color: white;
+  }
+
+  .center-header {
+    // border: 2px solid blue;
+    margin: auto;
+    // height: 80%;
+    width: 85%;
+    padding: 20px;
+
+    @include flex($direction: row);
+
+    .left {
+      // border: 2px solid white;
+      width: 40%;
+      position: relative;
+
+      p {
+        font-size: 8rem;
+        margin: 0;
+      }
+
+      // si on ajoute la plane en after :
+
+      // ::after {
+      //   content: "";
+      //   background: url(../img/ciPlanete.svg) no-repeat;
+      //   background-size: 50%; // !!!
+      //   display: inline-block;
+      //   width: 30%;
+      //   height: 0;
+      //   padding-bottom: 30%;
+      // }
+
+      // si on ajoute la planete en intégrant direct le svg 
+
+      .planete{
+        width: 20%;
+        position: absolute;
+        top: 10px;
+        left: 230px;
+    }
+
+
+        .testtest {
+          transform-origin: center center;
+          animation: tournerFleche 2s linear ; // infinite
+      }
+
+      @keyframes tournerFleche {
+              0% { transform: rotate(0);}
+              100% { transform: rotate(360deg); }
+          }
+      }
+    }
+
+    
+
+    .right {
+      // border: 2px solid purple;
+      width: 51%;
+
+      @include flex($direction: column);
+
+      .top {
+        @include flex($direction: row);
+
+        // ---------------------
+
+        .letter-space {
+          letter-spacing: 2px;
+          font-family: "Courier New", Courier, monospace;
+
+          //----
+
+          overflow: hidden;
+          border-right: 0.1em solid yellow;
+          white-space: nowrap;
+          animation: typing 3.5s steps(30, end),
+            blink-caret 0.5s step-end infinite;
+        }
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 285px;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: yellow;
+        }
+      }
+    }
+    // -----------------------
+
+    .bottom {
+      ul {
+        // border: 2px solid;
+        list-style: none;
+        padding: 90px 0 0 150px;
+        // margin-bottom: 0;
+
+        li {
+          a {
+            text-decoration: none;
+            color: rgb(169, 165, 165);
+
+            &:hover {
+              color: yellow;
+            }
+
+            &:before {
+              display: inline-block;
+              content: "";
+              width: 5px;
+              height: 5px;
+              background: yellow;
+              border-radius: 100%;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+// ul {
+
+// }
+
+// ::before {
+//     color: yellow;
+// }

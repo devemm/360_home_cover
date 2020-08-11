@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation svg</title>
+
+    <style>
+     ellipse{
+        stroke-dasharray: 1280;
+        stroke-dashoffset: 1280;
+        transition: 2s;
+    }
+
+    ellipse:hover{
+        stroke-dashoffset: 0;
+    }
+    </style>
+</head>
+<body>
+    
+
+<svg width="100%" height="500" xmlns="http://www.w3.org/2000/svg"> <ellipse ry="200" rx="200" cy="50%" cx="50%" stroke-width="10" fill="#3498db" stroke="#000" />
+</svg>
+
+
+<script>
+    // const ellipse = document.querySelector('ellipse');
+
+    // // console.log(ellipse.getTotalLength());
+
+    // ellipse.style.strokeDasharray =  ellipse.getTotalLength();
+
+    // ellipse.style.strokeDashoffset = ellipse.getTotalLength(); 
+
+    // ellipse.addEventListener('mouseover', () => {
+    //     ellipse.style.strokeDashoffset = 0;
+    //     ellipse.style.transition = '2s';
+    // });
+
+    // ellipse.addEventListener('mouseleave', () => {
+    //     ellipse.style.strokeDashoffset = ellipse.getTotalLength(); 
+    // });
+</script>
+</body>
+</html>

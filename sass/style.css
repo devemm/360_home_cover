@@ -1,0 +1,167 @@
+@charset "UTF-8";
+html, body {
+  margin: 0; }
+
+header {
+  background-color: #171c32;
+  background-size: 5px;
+  color: white;
+  height: 27vh; }
+  header::before {
+    content: "";
+    background-image: url("../img/trame.gif");
+    width: 100%;
+    height: 0;
+    opacity: 0.1;
+    display: block;
+    padding-bottom: 27vh;
+    position: absolute;
+    background-size: 1%;
+    left: 0;
+    top: 0; }
+  header hr {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 45px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding-bottom: 15px; }
+  header a {
+    color: white; }
+  header .center-header {
+    margin: auto;
+    width: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    header .center-header .left {
+      width: 40%;
+      position: relative; }
+      header .center-header .left p {
+        font-size: 8rem;
+        margin: 0; }
+      header .center-header .left .planete {
+        width: 20%;
+        position: absolute;
+        top: 10px;
+        left: 230px; }
+      header .center-header .left .testtest {
+        transform-origin: center center;
+        animation: tournerFleche 2s linear; }
+
+@keyframes tournerFleche {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+  header .right {
+    width: 51%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* The typewriter cursor effect */ }
+    header .right .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      header .right .top .letter-space {
+        letter-spacing: 2px;
+        font-family: "Courier New", Courier, monospace;
+        overflow: hidden;
+        border-right: 0.1em solid yellow;
+        white-space: nowrap;
+        animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite; }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 285px; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: yellow; } }
+  header .bottom ul {
+    list-style: none;
+    padding: 90px 0 0 150px; }
+    header .bottom ul li a {
+      text-decoration: none;
+      color: #a9a5a5; }
+      header .bottom ul li a:hover {
+        color: yellow; }
+      header .bottom ul li a:before {
+        display: inline-block;
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: yellow;
+        border-radius: 100%;
+        vertical-align: middle; }
+
+.container {
+  background: url(../img/p38_1484_Game-of-Thrones01.jpg) no-repeat;
+  height: 80vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .container .quote {
+    width: 20%;
+    margin-left: 15%;
+    position: relative;
+    z-index: 1; }
+    .container .quote h2 {
+      font-size: 3rem;
+      font-family: "Times New Roman", Times, serif;
+      line-height: 55px;
+      margin-bottom: 0;
+      font-weight: lighter; }
+    .container .quote::before {
+      position: absolute;
+      content: "“";
+      font-size: 16rem;
+      font-weight: bolder;
+      color: #00aeff;
+      z-index: -1; }
+  .container .titre {
+    width: 75%;
+    margin-left: 10%;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; }
+    .container .titre .fade-out {
+      color: rgba(86, 182, 226, 0.961);
+      margin-bottom: 0;
+      animation: fadeOut ease 5s forwards;
+      font-size: 4rem; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+    .container .titre .resize {
+      font-size: 1.3rem;
+      font-weight: bold;
+      width: 75%;
+      text-align: left; }
+      .container .titre .resize span {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal; }
+
+@keyframes reSize {
+  0% {
+    font-size: 1.3rem; }
+  1% {
+    text-align: inherit; }
+  100% {
+    font-size: 2.5rem;
+    width: 100%; } }
+
+.center-all {
+  width: 1200px;
+  margin: 0 auto; }

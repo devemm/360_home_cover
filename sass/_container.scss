@@ -1,0 +1,99 @@
+.container {
+    // border: 2px solid orange;
+    background: url(../img/p38_1484_Game-of-Thrones01.jpg) no-repeat;
+    height: 80vh;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .quote {
+        width: 20%;
+        margin-left: 15%;
+        position: relative;
+        z-index: 1;
+
+        h2{
+            font-size: 3rem;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 55px;
+
+
+            margin-bottom: 0;
+            font-weight: lighter;
+        }
+
+        &::before {
+            position: absolute;
+            content: "“";
+            font-size: 16rem;
+            font-weight: bolder;
+            color: rgb(0, 174, 255);
+            // top: 450px;
+            // left: 230px;
+            z-index: -1;
+        }
+        
+    }
+
+
+    .titre {
+        width: 75%;
+        margin-left: 10%;
+
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+        .fade-out {
+        color: rgba(86, 182, 226, 0.961);
+        margin-bottom: 0;
+        animation: fadeOut ease 5s forwards;
+
+        font-size: 4rem;
+        }
+
+        @keyframes fadeOut {
+            0% {
+              opacity:1;
+            }
+            100% {
+              opacity:0;
+            //   font-size: 5rem;
+            }
+          }
+
+        .resize{
+            font-size: 1.3rem;
+            font-weight: bold;
+            width: 75%;
+            text-align: left;
+
+            // transition-property: font-size;
+
+            // &:hover {
+            //     font-size: 2rem;
+            // }
+
+            span{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: normal;
+            }
+
+            // animation: reSize ease 5s forwards;
+
+        }
+
+            @keyframes reSize {
+                0%   { font-size: 1.3rem; 
+                }
+                1%   { text-align: inherit; 
+                }
+                100% { font-size: 2.5rem; 
+                    width: 100%;
+                    
+                }
+            }
+    }
+
+}
+

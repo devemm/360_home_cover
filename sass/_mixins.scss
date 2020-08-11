@@ -1,0 +1,27 @@
+// mixin pour toutes les flex-box
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+}
+
+// mixin width + margin-left (pas d'econonomie de ligne)
+
+// @mixin wid_margeLeft($width, $margin) {
+//     width: $width;
+//     margin-left: $margin;
+// }
+
+// width + height
+
+@mixin wid_height($width, $height) {
+    width: $width;
+    margin-left: $height;
+}
+
+// mixin backgroung + (text) color
+
+@mixin bckg_textColor {
+
+}
